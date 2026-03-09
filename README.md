@@ -96,7 +96,7 @@ python -m rag.cli remove "filename.txt"
 python -m rag.api.app
 
 # Apri nel browser
-# http://localhost:8000
+# http://localhost:8080
 ```
 
 La web UI permette di:
@@ -117,15 +117,15 @@ Con il server avviato, gli endpoint disponibili sono:
 | `POST` | `/api/ingest` | Re-indicizza tutti i documenti |
 | `GET` | `/api/health` | Health check |
 
-Documentazione interattiva Swagger: `http://localhost:8000/docs`
+Documentazione interattiva Swagger: `http://localhost:8080/docs`
 
 Esempio con curl:
 ```bash
 # Indicizza documenti
-curl -X POST http://localhost:8000/api/ingest
+curl -X POST http://localhost:8080/api/ingest
 
 # Fai una domanda
-curl -X POST http://localhost:8000/api/ask \
+curl -X POST http://localhost:8080/api/ask \
   -H "Content-Type: application/json" \
   -d '{"question": "What is the CAP theorem?"}'
 ```
