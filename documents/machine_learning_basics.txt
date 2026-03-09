@@ -1,0 +1,69 @@
+Machine Learning Basics
+
+Introduction to Machine Learning
+
+Machine learning is a subset of artificial intelligence that enables systems to learn and improve from experience without being explicitly programmed. Instead of writing rules by hand, ML algorithms learn patterns from data to make predictions or decisions.
+
+There are three main paradigms of machine learning: supervised learning, unsupervised learning, and reinforcement learning.
+
+Supervised Learning
+
+In supervised learning, the algorithm learns from labeled training data. Each training example consists of an input and the desired output. The goal is to learn a mapping function from inputs to outputs that generalizes to unseen data.
+
+Common supervised learning tasks include:
+- Classification: predicting a discrete label (e.g., spam vs not spam, image recognition)
+- Regression: predicting a continuous value (e.g., house prices, temperature forecasting)
+
+Popular algorithms for supervised learning include:
+- Linear Regression: models the relationship between variables as a linear equation. Simple, interpretable, and fast. Works best when the relationship is approximately linear.
+- Logistic Regression: despite the name, used for classification. Models the probability of class membership using a sigmoid function.
+- Decision Trees: make predictions by learning a hierarchy of if-else rules from the data. Easy to interpret but prone to overfitting.
+- Random Forests: an ensemble of decision trees that reduces overfitting through bagging (bootstrap aggregation). Each tree votes and the majority wins.
+- Support Vector Machines (SVM): find the hyperplane that best separates classes with maximum margin. Effective in high-dimensional spaces.
+- Neural Networks: layers of interconnected nodes that learn hierarchical representations. Extremely powerful but require large datasets and computational resources.
+
+Unsupervised Learning
+
+In unsupervised learning, the algorithm works with unlabeled data and must discover hidden patterns or structures on its own.
+
+Common unsupervised learning tasks include:
+- Clustering: grouping similar data points together (e.g., customer segmentation, document topic grouping)
+- Dimensionality Reduction: reducing the number of features while preserving important information (e.g., PCA, t-SNE)
+- Anomaly Detection: identifying unusual patterns that do not conform to expected behavior
+
+Popular clustering algorithms include K-Means (partitions data into k groups by minimizing within-cluster variance), DBSCAN (density-based, can find arbitrarily shaped clusters), and Hierarchical Clustering (builds a tree of nested clusters).
+
+Overfitting and Underfitting
+
+Overfitting occurs when a model learns the training data too well, including its noise and outliers. The model performs excellently on training data but poorly on unseen data. Signs of overfitting include a large gap between training and validation accuracy.
+
+Techniques to prevent overfitting:
+- Cross-validation: split data into multiple folds and evaluate on each
+- Regularization: add a penalty term to the loss function (L1 for sparsity, L2 for small weights)
+- Early stopping: halt training when validation performance stops improving
+- Dropout: randomly disable neurons during training (for neural networks)
+- Data augmentation: artificially increase training data size
+
+Underfitting occurs when a model is too simple to capture the underlying patterns. The model performs poorly on both training and test data. Solutions include using a more complex model, adding features, or reducing regularization.
+
+Train/Test Split
+
+Properly evaluating a model requires splitting data into separate sets:
+- Training set (typically 70-80%): used to train the model
+- Validation set (10-15%): used to tune hyperparameters and prevent overfitting
+- Test set (10-15%): used only for final evaluation, never seen during training
+
+For small datasets, use k-fold cross-validation instead: divide data into k folds, train on k-1 folds and validate on the remaining fold, rotating through all combinations.
+
+Evaluation Metrics
+
+For classification:
+- Accuracy: fraction of correct predictions. Misleading for imbalanced datasets.
+- Precision: fraction of positive predictions that are correct. Important when false positives are costly.
+- Recall: fraction of actual positives that are correctly identified. Important when false negatives are costly.
+- F1 Score: harmonic mean of precision and recall. Balances both metrics.
+
+For regression:
+- Mean Squared Error (MSE): average of squared differences. Penalizes large errors heavily.
+- Mean Absolute Error (MAE): average of absolute differences. More robust to outliers.
+- R-squared: proportion of variance explained by the model. 1.0 is perfect, 0.0 means the model is no better than predicting the mean.
