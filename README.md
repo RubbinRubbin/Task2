@@ -1,7 +1,5 @@
 # RAG Q&A System
 
-Sistema di Question & Answer basato su **Retrieval-Augmented Generation** (RAG) che risponde a domande su una collezione di documenti con attribuzione delle fonti.
-
 ## Architettura
 
 ```
