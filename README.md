@@ -92,12 +92,11 @@ python -m rag.cli remove "filename.txt"
 ### Uso via Web UI
 
 ```bash
-# Avvia il server
-python -m rag.api.app
-
-# Apri nel browser
-# http://localhost:8080
+pip install -e ".[dev]"   # installa dipendenze (da fare solo la prima volta)
+python run.py
 ```
+
+Apri nel browser: `http://localhost:8080`
 
 La web UI permette di:
 - **Caricare documenti** tramite drag & drop o file picker (TXT, MD, PDF)
